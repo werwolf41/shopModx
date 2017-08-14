@@ -1,0 +1,4 @@
+key: msoptionsprice_allow_zero_cost
+xtype: combo-boolean
+namespace: msoptionsprice
+area: msoptionsprice_main

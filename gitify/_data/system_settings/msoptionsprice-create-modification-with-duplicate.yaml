@@ -1,0 +1,5 @@
+key: msoptionsprice_create_modification_with_duplicate
+value: '1'
+xtype: combo-boolean
+namespace: msoptionsprice
+area: msoptionsprice_main

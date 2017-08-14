@@ -1,0 +1,3 @@
+pluginid: 10
+event: OnResourceUndelete
+priority: 1

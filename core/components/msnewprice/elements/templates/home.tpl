@@ -1,0 +1,1 @@
+<div id="msnewprice-panel-home-div"></div>

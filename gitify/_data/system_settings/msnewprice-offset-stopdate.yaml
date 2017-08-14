@@ -1,0 +1,5 @@
+key: msnewprice_offset_stopdate
+value: '96'
+xtype: numberfield
+namespace: msnewprice
+area: msnewprice_main

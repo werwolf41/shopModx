@@ -1,0 +1,4 @@
+key: msoptionscolor_active_ral
+xtype: combo-boolean
+namespace: msoptionscolor
+area: msoptionscolor_main

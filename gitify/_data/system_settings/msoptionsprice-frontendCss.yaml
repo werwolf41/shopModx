@@ -1,0 +1,4 @@
+key: msoptionsprice_frontendCss
+value: '[[+assetsUrl]]css/web/default.css'
+namespace: msoptionsprice
+area: msoptionsprice_main

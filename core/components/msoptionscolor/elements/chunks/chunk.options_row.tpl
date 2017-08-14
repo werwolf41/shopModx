@@ -1,0 +1,1 @@
+<option value="[[+value]]" data-color="[[+color]]" data-pattern="[[+pattern]]" [[+selected]]>[[+value]]</option>

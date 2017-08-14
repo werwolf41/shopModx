@@ -1,0 +1,3 @@
+pluginid: 10
+event: OnCommentRemove
+priority: 1

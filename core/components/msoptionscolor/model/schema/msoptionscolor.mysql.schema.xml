@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msoptionscolor" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="msoptionscolor"
+	   version="1.1">
+
+	<object class="msopColor" table="msop_color" extends="xPDOSimpleObject">
+		<field key="product_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+		<field key="option" dbtype="tinyint" precision="3" attributes="unsigned" phptype="integer" null="false" />
+		<field key="value" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="color" dbtype="varchar" precision="11" phptype="string" null="true" default="0" />
+		<field key="pattern" dbtype="varchar" precision="255" phptype="string" null="true" />
+		<field key="active" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1" />
+		<field key="rank" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="true" default="0" />
+		<index alias="product" name="product" primary="false" unique="false" type="BTREE" >
+			<column key="product_id" length="" collation="A" null="false" />
+			<column key="option" length="" collation="A" null="false" />
+			<column key="value" length="" collation="A" null="false" />
+		</index>
+		<aggregate alias="Option" class="msopOption" local="option" foreign="id" cardinality="one" owner="foreign" />
+		<aggregate alias="Ral" class="msopRal" local="color" foreign="html" cardinality="one" owner="foreign" />
+	</object>
+
+	<object class="msopOption" table="msop_option" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="key" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="description" dbtype="text" phptype="string" null="true" />
+		<field key="rank" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="true" default="0" />
+		<field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="true" default="1" />
+		<field key="editable" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1" />
+		<aggregate alias="Color" class="msopColor" local="id" foreign="option" cardinality="many" owner="local" />
+	</object>
+
+	<object class="msopRal" table="msop_ral" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="ral" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="html" dbtype="varchar" precision="255" phptype="string" null="false" />
+		<field key="description" dbtype="text" phptype="string" null="true" />
+		<field key="rank" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="true" default="0" />
+		<field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="true" default="1" />
+		<field key="editable" dbtype="tinyint" precision="1" phptype="integer" null="true" default="1" />
+		<aggregate alias="Color" class="msopColor" local="ral" foreign="color" cardinality="many" owner="local" />
+	</object>
+
+</model>

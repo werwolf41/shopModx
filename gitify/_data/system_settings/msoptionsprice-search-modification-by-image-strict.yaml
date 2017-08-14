@@ -1,0 +1,4 @@
+key: msoptionsprice_search_modification_by_image_strict
+xtype: combo-boolean
+namespace: msoptionsprice
+area: msoptionsprice_main

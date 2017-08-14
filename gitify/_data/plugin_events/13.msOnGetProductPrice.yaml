@@ -1,0 +1,3 @@
+pluginid: 13
+event: msOnGetProductPrice
+priority: 10

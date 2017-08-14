@@ -1,0 +1,4 @@
+key: msnewprice_chunk_action
+xtype: msnewprice-combo-chunk
+namespace: msnewprice
+area: msnewprice_main

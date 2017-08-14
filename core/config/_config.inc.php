@@ -31,14 +31,14 @@ if (!defined('MODX_PROCESSORS_PATH')) {
     define('MODX_PROCESSORS_PATH', $modx_processors_path);
 }
 if (!defined('MODX_CONNECTORS_PATH')) {
-    $modx_connectors_path= '/home/werwolf4/www/colorshop/public_html/connectors/';
-    $modx_connectors_url= '/connectors/';
+    $modx_connectors_path= '/home/werwolf4/www/colorshop/public_html/joins/';
+    $modx_connectors_url= '/joins/';
     define('MODX_CONNECTORS_PATH', $modx_connectors_path);
     define('MODX_CONNECTORS_URL', $modx_connectors_url);
 }
 if (!defined('MODX_MANAGER_PATH')) {
-    $modx_manager_path= '/home/werwolf4/www/colorshop/public_html/manager/';
-    $modx_manager_url= '/manager/';
+    $modx_manager_path= '/home/werwolf4/www/colorshop/public_html/shop-panel/';
+    $modx_manager_url= '/shop-panel/';
     define('MODX_MANAGER_PATH', $modx_manager_path);
     define('MODX_MANAGER_URL', $modx_manager_url);
 }

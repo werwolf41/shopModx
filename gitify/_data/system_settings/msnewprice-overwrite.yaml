@@ -1,0 +1,5 @@
+key: msnewprice_overwrite
+value: '1'
+xtype: combo-boolean
+namespace: msnewprice
+area: msnewprice_main

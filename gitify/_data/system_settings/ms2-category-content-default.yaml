@@ -1,0 +1,5 @@
+key: ms2_category_content_default
+value: "[[!pdoPage?\n\t&element=`msProducts`\n]]\n\n[[!+page.nav]]"
+xtype: textarea
+namespace: minishop2
+area: ms2_category

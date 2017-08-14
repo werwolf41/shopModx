@@ -1,0 +1,6 @@
+Changelog for msNewPrice.
+
+1.0.1-beta (31.08.2016)
+==============
+- Compatibility with "miniShop2 2.4.0"
+

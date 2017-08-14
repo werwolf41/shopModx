@@ -1,0 +1,5 @@
+key: msnewprice_offset_startdate
+value: '24'
+xtype: numberfield
+namespace: msnewprice
+area: msnewprice_main

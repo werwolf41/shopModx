@@ -1,0 +1,27 @@
+.msnewprice {}
+
+a.msnewprice-link {
+    text-decoration: none;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+a.msnewprice-link:hover {border-bottom-style: solid;}
+a.msnewprice-link.active {
+    border-bottom: none;
+    background: #efefef;
+    color: black;
+}
+
+.msnewprice .msnewprice-add {display:inline;}
+.msnewprice .msnewprice-remove {display:none;}
+
+.msnewprice.added .msnewprice-add {display:none;}
+.msnewprice.added .msnewprice-remove {display:inline;}
+
+.msnewprice .loading {opacity: .7;cursor:default;}
+.msnewprice .loading:hover {text-decoration: none;}
+
+.msnewprice a:hover,.msnewprice a:focus {
+    color: #2A6496;
+    text-decoration: none;
+}

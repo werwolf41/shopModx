@@ -1,0 +1,5 @@
+key: msnewprice_res_delsubscribe
+value: '12'
+xtype: numberfield
+namespace: msnewprice
+area: msnewprice_main

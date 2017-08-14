@@ -1,0 +1,30 @@
+Changelog for msOptionsColor.
+
+1.0.6-beta (19.06.2016)
+==============
+- Compatibility with "miniShop2 2.4.0"
+
+1.0.5-beta (09.06.2016)
+==============
+- Fix "msopRal:save"
+- Fix "msopColor:save"
+
+1.0.4-beta (11.05.2016)
+==============
+- Fix combo trigger
+
+1.0.3-beta (15.03.2016)
+==============
+- Fix error on create
+
+1.0.2-beta (15.03.2016)
+==============
+- Add xtype "msoptionscolor-combo-rals"
+
+1.0.1-beta
+==============
+- Add msOptionsColorManagerPolicy
+
+1.0.0-beta
+==============
+- initial release.

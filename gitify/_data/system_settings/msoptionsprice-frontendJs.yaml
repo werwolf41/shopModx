@@ -1,0 +1,4 @@
+key: msoptionsprice_frontendJs
+value: '[[+assetsUrl]]js/web/default.js'
+namespace: msoptionsprice
+area: msoptionsprice_main

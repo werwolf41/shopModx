@@ -1,0 +1,4 @@
+key: msoptionscolor_frontend_js
+value: '[[+assetsUrl]]js/web/default.js'
+namespace: msoptionscolor
+area: msoptionscolor_main

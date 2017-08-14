@@ -1,0 +1,4 @@
+key: msnewprice_action
+xtype: combo-boolean
+namespace: msnewprice
+area: msnewprice_main

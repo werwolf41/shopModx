@@ -1,0 +1,4 @@
+key: msoptionsprice_number_format
+value: '[0, 1]'
+namespace: msoptionsprice
+area: msoptionsprice_main

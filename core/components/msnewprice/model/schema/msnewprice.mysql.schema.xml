@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msnewprice" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="msnewprice"
+	   version="1.1">
+
+    <object class="msnewpricedata" table="msnewprice_data" extends="xPDOObject">
+        <field key="msn_product_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" index="pk" />
+        <field key="msn_newprice" dbtype="decimal" precision="12,2" phptype="float" null="true" default="0"/>
+        <field key="msn_action" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0" />
+        <field key="msn_overwrite" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0" />
+        <field key="msn_description" dbtype="text" phptype="string" null="true" />
+        <field key="msn_startdate" dbtype="datetime" phptype="datetime" null="true" default="0000-00-00 00:00:00" />
+        <field key="msn_stopdate" dbtype="datetime" phptype="datetime" null="true" default="0000-00-00 00:00:00" />
+        <field key="msn_processed" dbtype="tinyint" precision="1" attributes="unsigned" phptype="boolean" null="true" default="0" index="index" />
+
+        <index alias="product" name="product" primary="true" unique="true" type="BTREE" >
+            <column key="msn_product_id" length="" collation="A" null="false" />
+        </index>
+        <aggregate alias="Product" class="msProduct" local="msn_product_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Resource" class="modResource" local="msn_product_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+
+    <object class="msnewpricelist" table="msnewprice_list" extends="xPDOSimpleObject">
+        <field key="res_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="user_id" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" />
+        <field key="list" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+        <field key="hash" dbtype="char" precision="40" phptype="string" null="false" default="" index="index" />
+
+        <index alias="res_id" name="res_id" primary="false" unique="false" type="BTREE" >
+            <column key="res_id" length="" collation="A" null="false" />
+        </index>
+        <index alias="user_id" name="user_id" primary="false" unique="false" type="BTREE" >
+            <column key="user_id" length="" collation="A" null="false" />
+        </index>
+        <index alias="list" name="list" primary="false" unique="false" type="BTREE">
+            <column key="list" length="" collation="A" null="false" />
+        </index>
+        <index alias="hash" name="hash" primary="false" unique="false" type="BTREE" >
+            <column key="hash" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Product" class="msProduct" local="res_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="Resource" class="modResource" local="res_id" foreign="id" cardinality="one" owner="foreign" />
+
+        <aggregate alias="User" class="modUser" local="user_id" foreign="id" owner="foreign" cardinality="one" />
+        <aggregate alias="UserProfile" class="modUserProfile" local="user_id" foreign="internalKey" owner="foreign" cardinality="one" />
+    </object>
+
+
+    <object class="msnewpricequeue" table="msnewprice_mail_queues" extends="xPDOSimpleObject">
+        <field key="timestamp" dbtype="timestamp" phptype="timestamp" null="false" default="CURRENT_TIMESTAMP" />
+        <field key="uid" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0" />
+        <field key="subject" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+        <field key="body" dbtype="text" phptype="string" null="true" default="" />
+        <field key="email" dbtype="varchar" precision="255" phptype="string" null="true" default="" />
+
+        <index alias="uid" name="uid" primary="false" unique="false" type="BTREE">
+            <column key="uid" length="" collation="A" null="false" />
+        </index>
+        <index alias="email" name="email" primary="false" unique="false" type="BTREE">
+            <column key="email" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="User" class="modUser" local="uid" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+</model>

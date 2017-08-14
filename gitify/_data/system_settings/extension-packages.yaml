@@ -1,0 +1,3 @@
+key: extension_packages
+value: '[{"collections":{"path":"[[++core_path]]components/collections/model/"}},{"minishop2":{"path":"[[++core_path]]components/minishop2/model/"}},{"msnewprice":{"path":"[[++core_path]]components/msnewprice/model/"}},{"msoptionsprice":{"path":"[[++core_path]]components/msoptionsprice/model/"}}]'
+area: system
